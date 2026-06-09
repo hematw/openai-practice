@@ -3,8 +3,8 @@ import OpenAI from "openai";
 import "./App.css";
 
 const DEFAULT_PROMPT = "You are a helpful assistant.";
-const OPEN_AI_KEY = "your-key-here";
-const AI_URL = "https://openrouter.ai/api/v1";
+const OPEN_AI_KEY = import.meta.env.VITE_OPENAI_KEY;
+const AI_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   const [messages, setMessages] = useState([
